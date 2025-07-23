@@ -5,8 +5,8 @@ import { EventsService } from './events.service';
 export class EventsController {
   constructor(private readonly eventsService: EventsService) {}
 
-  @Get("/")
-  getEvents(@Param() title: string) {
-    return this.eventsService.getEvents(title);
+  @Get(":id")
+  getEvents(@Param("id") id: string) {
+    return this.eventsService.getEvents(id);
   }
 }
