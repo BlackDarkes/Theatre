@@ -18,7 +18,7 @@ export const Button = ({
     <button
       type="button"
       aria-label={ariaLabel}
-      className={`${styles.button} ${className}`}
+      className={`${styles.button} ${className ? className : ""}`}
       onClick={onClick}
     >
       {children}

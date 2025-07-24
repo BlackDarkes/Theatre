@@ -1,0 +1,54 @@
+.burgerButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(30);
+  height: rem(20);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: rem(3);
+    background-color: $mainBlack;
+    border-radius: rem(4);
+    transition: $transition;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &Line {
+    width: 100%;
+    height: rem(3);
+    border-radius: rem(4);
+    background-color: $mainBlack;
+    transition: $transition;
+  }
+}
+
+.burgerButtonActive {
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+    top: 50%;
+    left: 50%;
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+    top: 50%;
+    left: 50%;
+  }
+
+  &Line {
+    scale: 0;
+  }
+}
