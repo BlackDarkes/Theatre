@@ -1,9 +1,10 @@
-import { BurgerButton } from "../../widgets/burgerMenu/ui/BurgerButton/BurgerButton";
+import { Header } from "../../widgets/Header";
+
 
 export const HomePage = () => {
   return (
     <>
-      <BurgerButton isOpen={true}></BurgerButton>
+      <Header />
     </>
   );
-}
+};

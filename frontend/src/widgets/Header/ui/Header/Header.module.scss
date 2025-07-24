@@ -1,0 +1,37 @@
+.header {
+  position: relative;
+  padding-block: rem(8);
+  background-color: $mainWhite;
+
+  &Container {
+    display: flex;
+    align-items: center;
+    column-gap: rem(40);
+
+    @include mobile() {
+      justify-content: space-between;
+    }
+  }
+
+  &List {
+    @include mobile() {
+      display: none;
+    }
+  }
+
+  &BurgerList {
+    flex-direction: column;
+    font-size: rem(24);
+  }
+
+  &Close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: $z-300;
+
+    @include mobile-above() {
+      display: none !important;
+    }
+  }
+}

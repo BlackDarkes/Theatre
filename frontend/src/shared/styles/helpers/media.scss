@@ -13,7 +13,7 @@ $mobile-s: 480.98;
   }
 
   @media (hover: none) {
-    & {
+    &:active {
       @content;
     }
   }

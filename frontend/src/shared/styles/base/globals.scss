@@ -1,5 +1,6 @@
 body {
   font-family: "SF Pro Display";
+  -webkit-tap-highlight-color: transparent;
 }
 
 button {
@@ -10,4 +11,10 @@ button {
   background-color: transparent;
   color: inherit;
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: 0;
 }

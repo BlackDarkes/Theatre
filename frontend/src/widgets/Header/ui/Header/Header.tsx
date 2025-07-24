@@ -1,14 +1,25 @@
+import ImageLogo from "../../assets/logo.svg";
 import { Container } from "../../../../shared/ui/Container/Container";
-import ImageLogo from "../../assets/logo.svg?react";
 import { NavBar } from "../NavBar/NavBar";
+import styles from './Header.module.scss'
+import { BurgerButton, BurgerMenu, useBurgerMenu } from "../../../burgerMenu";
 
 export const Header = () => {
-  return (
-    <header>
-      <Container>
-        <ImageLogo />
+  const { isOpen, toggleMenu, closeMenu } = useBurgerMenu();
 
-        <NavBar />
+  return (
+    <header className={styles.header}>
+      <Container className={styles.headerContainer}>
+        <img src={ImageLogo} alt="Логотип" />
+
+        <nav className={styles.headerList}>
+          <NavBar tabIndex={1} />
+        </nav>
+
+        <BurgerButton isOpen={isOpen} onClick={toggleMenu} className={styles.headerClose} />
+        <BurgerMenu isOpen={isOpen} onClose={closeMenu} >
+          <NavBar tabIndex={-1} className={styles.headerBurgerList} />
+        </BurgerMenu>
       </Container>
     </header>
   );

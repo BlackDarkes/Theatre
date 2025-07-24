@@ -1,0 +1,45 @@
+.navigationList {
+  display: flex;
+  gap: rem(50);
+  color: $mainBlack;
+
+  &Link {
+    position: relative;
+    outline: rem(1) solid transparent;
+    outline-offset: rem(4);
+    border-radius: rem(4);
+    transition: $transition;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: rem(-3);
+      left: 0;
+      width: 100%;
+      height: rem(2);
+      background-color: $mainBlack;
+      scale: 0;
+      transform-origin: left;
+      transition: $transition;
+    }
+
+    &:active {
+      color: $mainRed;
+
+      &::before {
+        background-color: $mainRed;
+      }
+    }
+
+    &:focus-visible {
+      outline-color: $mainBlack;
+    }
+
+    @include hover() {
+      &::before {
+        scale: 1;
+        transform-origin: left;
+      }
+    }
+  }
+}
