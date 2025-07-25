@@ -7,18 +7,36 @@ interface IHeroSliderProps {
 
 export const useHeroSlider = ({ sliderRef }: IHeroSliderProps) => {
   const timerRef = useRef<NodeJS.Timeout>(null);
-
+  const isTransitioning = useRef(false);
 
   const startAutoSlider = () => {
     timerRef.current = setInterval(() => {
-      if (sliderRef.current) {
-        sliderRef.current.scrollBy({
-          left: sliderRef.current.offsetWidth,
-          behavior: "smooth",
-        })
+      if (!sliderRef.current || isTransitioning.current) return;
+
+      const { scrollLeft, scrollWidth, clientWidth } = sliderRef.current;
+      const isAtEnd = scrollLeft + clientWidth >= scrollWidth - 1;
+
+      if (isAtEnd) {
+        isTransitioning.current = true;
+        sliderRef.current.scrollTo({ left: 0, behavior: 'auto' });
+        
+        setTimeout(() => {
+          if (sliderRef.current) {
+            sliderRef.current.scrollBy({ 
+              left: sliderRef.current.offsetWidth, 
+              behavior: 'smooth' 
+            });
+            isTransitioning.current = false;
+          }
+        }, 50);
+      } else {
+        sliderRef.current.scrollBy({ 
+          left: sliderRef.current.offsetWidth, 
+          behavior: 'smooth' 
+        });
       }
-    })
-  }
+    }, 6000);
+  };
 
   const stopAutoSlider = () => {
     if (timerRef.current) {
@@ -50,8 +68,10 @@ export const useHeroSlider = ({ sliderRef }: IHeroSliderProps) => {
 
   useEffect(() => {
     startAutoSlider();
-    return () => stopAutoSlider();
-  }, [])
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, []);
 
   return { nextSlide, previewSlide };
 }

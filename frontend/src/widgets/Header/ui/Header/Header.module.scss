@@ -1,7 +1,11 @@
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   padding-block: rem(8);
+  width: 100%;
   background-color: $mainWhite;
+  z-index: $z-400;
 
   &Container {
     display: flex;
@@ -44,7 +48,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    z-index: $z-300;
+    z-index: $z-500;
 
     @include mobile-above() {
       display: none !important;

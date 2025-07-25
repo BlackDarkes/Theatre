@@ -3,6 +3,7 @@
   width: 100%;
   height: rem(530);
   overflow-x: auto;
+  scroll-snap-type: x mandatory;
 
   &::-webkit-scrollbar {
     display: none;
@@ -11,5 +12,12 @@
   &Slide {
     flex-shrink: 0;
     width: 100%;
+    background: url("../../assets/background.png") center no-repeat;
+    background-size: cover;
+    scroll-snap-align: start;
+  }
+
+  @include mobile() {
+    height: rem(718);
   }
 }

@@ -1,0 +1,90 @@
+.hero {
+  position: relative;
+  margin-top: rem(71);
+  height: rem(530);
+  z-index: $z-100;
+
+  &Slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $z-100;
+  }
+
+  &Container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    z-index: $z-200;
+  }
+
+  &Info {
+    flex-direction: column;
+    margin-bottom: rem(120);
+    color: $mainWhite;
+
+    &Title {
+      color: $acceptGray;
+      font-size: rem(18);
+      font-weight: 700;
+    }
+
+    &Text {
+      color: $mainWhite;
+      font-size: rem(36);
+    }
+
+    @include mobile-above() {
+      display: none;
+    }
+  }
+
+  &Block {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    bottom: rem(50);
+    width: 100%;
+    color: $mainWhite;
+    left: 0;
+  }
+
+  &Title {
+    @include fluid-text(72, 36);
+    width: min(100%, rem(585));
+  }
+
+  &Buttons {
+    display: flex;
+    column-gap: rem(10);
+
+    @include mobile() {
+      display: none;
+    }
+  }
+
+  &Button {
+    width: rem(45);
+    aspect-ratio: 1;
+    background-color: $mainWhite;
+    color: $mainBlack;
+    outline: rem(1) solid transparent;
+    outline-offset: rem(4);
+    border-radius: 50%;
+    transition: $transition;
+
+    &:focus-visible {
+      outline-color: $mainRed;
+    }
+
+    @include hover() {
+      background-color: $mainGray;
+    }
+  }
+
+  @include mobile() {
+    height: rem(718);
+  }
+}
