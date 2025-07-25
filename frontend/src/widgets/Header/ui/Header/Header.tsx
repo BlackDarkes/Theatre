@@ -10,7 +10,11 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <Container className={styles.headerContainer}>
-        <img src={ImageLogo} alt="Логотип" />
+        <p className={styles.headerLogoBlock}>
+          <img src={ImageLogo} alt="Логотип" />
+
+          <h1 className={styles.headerLogoSlogan}>Казанский ТЮЗ</h1>
+        </p>
 
         <nav className={styles.headerList}>
           <NavBar tabIndex={1} />

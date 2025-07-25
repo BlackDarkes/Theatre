@@ -13,6 +13,21 @@
     }
   }
 
+  &LogoBlock {
+    display: flex;
+    align-items: center;
+    column-gap: rem(20);
+  }
+
+  &LogoSlogan {
+    font-size: rem(14);
+    font-weight: 600;
+
+    @include mobile-above() {
+      display: none;
+    }
+  }
+
   &List {
     @include mobile() {
       display: none;
@@ -22,6 +37,7 @@
   &BurgerList {
     flex-direction: column;
     font-size: rem(24);
+    font-weight: 600;
   }
 
   &Close {

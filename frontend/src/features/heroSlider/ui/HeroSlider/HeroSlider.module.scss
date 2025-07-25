@@ -1,0 +1,15 @@
+.heroSlider {
+  display: flex;
+  width: 100%;
+  height: rem(530);
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &Slide {
+    flex-shrink: 0;
+    width: 100%;
+  }
+}
