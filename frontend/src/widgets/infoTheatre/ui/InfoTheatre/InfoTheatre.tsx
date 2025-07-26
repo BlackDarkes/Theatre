@@ -7,7 +7,7 @@ export const InfoTheatre = () => {
   return (
     <section className={styles.infoTheatre}>
       <Container className={styles.infoTheatreContainer}>
-        <TheatreInfo className="" classTitle={styles.infoTheatreTitle} classText={styles.infoTheatreText} />
+        <TheatreInfo className={styles.infoTheatreBlock} classTitle={styles.infoTheatreTitle} classText={styles.infoTheatreText} />
 
         <Link to={"/about"} className={styles.infoTheatreLink}>Узнать подробнее</Link>
       </Container>
