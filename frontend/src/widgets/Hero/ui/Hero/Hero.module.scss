@@ -75,12 +75,17 @@
     border-radius: 50%;
     transition: $transition;
 
-    &:focus-visible {
-      outline-color: $mainRed;
-    }
-
     @include hover() {
       background-color: $mainGray;
+    }
+
+    &:active {
+      background-color: $mainBlack;
+      color: $mainWhite;
+    }
+
+    &:focus-visible {
+      outline-color: $mainRed;
     }
   }
 

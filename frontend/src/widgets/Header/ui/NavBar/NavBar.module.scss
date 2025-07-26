@@ -23,6 +23,13 @@
       transition: $transition;
     }
 
+    @include hover() {
+      &::before {
+        scale: 1;
+        transform-origin: left;
+      }
+    }
+
     &:active {
       color: $mainRed;
 
@@ -33,13 +40,6 @@
 
     &:focus-visible {
       outline-color: $mainRed;
-    }
-
-    @include hover() {
-      &::before {
-        scale: 1;
-        transform-origin: left;
-      }
     }
   }
 }

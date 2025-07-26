@@ -1,0 +1,68 @@
+.infoTheatre {
+  background-color: $acceptWhite;
+  padding-block: rem(42) rem(32);
+
+  &Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &Title {
+    margin-bottom: rem(3);
+    color: $darkGray;
+    font-size: rem(12);
+  }
+
+  &Text {
+    color: $mainBlack;
+    font-size: rem(24);
+  }
+
+  &Link {
+    position: relative;
+    outline: rem(1) solid transparent;
+    outline-offset: rem(5);
+    border-radius: rem(8);
+    font-weight: 600;
+    font-size: rem(18);
+    transition: $transition;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: rem(-3);
+      left: 0;
+      height: rem(2);
+      width: 100%;
+      background-color: $mainBlack;
+      transform-origin: left;
+      transition: $transition;
+    }
+
+    @include hover() {
+      color: $darkGray;
+
+      &::before {
+        background-color: $darkGray;
+        scale: 0;
+      }
+    }
+
+    &:active {
+      color: $mainRed;
+
+      &::before {
+        background-color: $mainRed;
+      }
+    }
+
+    &:focus-visible {
+      outline-color: $mainRed;
+
+      &::before {
+        scale: 0;
+      }
+    }
+  }
+}
