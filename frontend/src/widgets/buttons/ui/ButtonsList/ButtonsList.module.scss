@@ -1,0 +1,33 @@
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: rem(20);
+
+  &Link {
+    flex-shrink: 0;
+    outline: rem(1) solid transparent;
+    outline-offset: rem(5);
+    width: auto;
+    transition: $transition;
+
+    &:active {
+      transform: translateY(rem(1));
+    }
+
+    &:focus-visible {
+      outline-color: $mainBlack;
+    }
+
+    @include hover() {
+      background-color: $mainWhite;
+      color: $mainRed;
+    }
+  }
+
+  @include mobile-s() {
+    width: rem(290);
+    margin-inline: auto;
+  }
+}
