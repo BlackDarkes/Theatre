@@ -1,0 +1,46 @@
+.news {
+  position: relative;
+
+  &Image {
+    @include mobile() {
+      width: 100%;
+    }
+
+    @include mobile-s() {
+      height: rem(120);
+    }
+  }
+
+  &Title {
+    display: flex;
+    justify-content: space-between;
+    margin-block: rem(20) rem(10);
+
+    &Link {
+      color: $acceptDark;
+      font-size: rem(18);
+      font-weight: 600;
+      width: min(rem(418), 100%);
+    }
+
+    &Time {
+      font-size: rem(18);
+      color: $acceptGray;
+
+      @include mobile() {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        width: rem(77);
+        height: rem(30);
+      }
+    }
+  }
+
+  &About {
+    color: $darkGray;
+    font-size: rem(14);
+    line-height: rem(16);
+  }
+}

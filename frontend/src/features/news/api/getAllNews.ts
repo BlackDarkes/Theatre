@@ -10,7 +10,7 @@ export const useAllNews = () => {
   } = useQuery<INews[]>({
     queryKey: ["allNews"],
     queryFn: async () => {
-      const response = await axios.get<INews[]>(`${import.meta.env.VITE_API_IRL}/news`);
+      const response = await axios.get<INews[]>(`${import.meta.env.VITE_API_URL}/news`);
       return response.data;
     },
     staleTime: 5 * 60 * 1000, // 5 minutes,

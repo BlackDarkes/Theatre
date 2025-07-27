@@ -1,0 +1,8 @@
+.newsBlock {
+  padding-block: rem(50) rem(100);
+
+  &Title {
+    @include fluid-text(36, 30);
+    margin-bottom: rem(30);
+  }
+}

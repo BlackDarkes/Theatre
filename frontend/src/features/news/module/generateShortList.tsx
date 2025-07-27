@@ -6,13 +6,9 @@ interface IGenerateShortListProps {
 }
 
 export const generateShortList = ({ news }: IGenerateShortListProps) => {
-  const generate = () => {
-    news.map((news) => {
-      if (news.id < 4) {
-        return <NewsCart key={news.id} news={news} />;
-      }
-    });
-  };
-  
-  return generate
+  if (!Array.isArray(news)) return <p>No news found.</p>;
+
+  return news
+    .filter((newsItem) => newsItem.id <= 4)
+    .map((newsItem) => <NewsCart key={newsItem.id} news={newsItem} />);
 };
