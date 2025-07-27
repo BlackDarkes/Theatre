@@ -1,0 +1,57 @@
+.listItem {
+  position: relative;
+  flex-shrink: 0;
+  width: min(rem(335), 100%);
+  height: rem(450);
+  z-index: $z-200;
+
+  &Back {
+    position: absolute;
+    offset: 0;
+    width: 100%;
+    height: 100%;
+    background: no-repeat center center / cover;
+    box-shadow: inset rem(0) rem(0) rem(80) rem(70) $mainBlack;
+    z-index: $z-100;
+  }
+
+  &Info {
+    position: relative;
+    offset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: rem(28) rem(25);
+    height: 100%;
+    color: $mainWhite;
+    z-index: $z-200;
+  }
+
+  &Date {
+    display: flex;
+    column-gap: rem(10);
+
+    &Time {
+      padding: rem(6) rem(15);
+      background-color: $mainRed;
+      border-radius: rem(14);
+    }
+
+    &Age {
+      padding: rem(6) rem(15);
+      background-color: $mainWhite;
+      color: $mainBlack;
+      border-radius: rem(14);
+    }
+  }
+
+  &Title {
+    padding-bottom: rem(10);
+    font-size: rem(20);
+  }
+
+  &About {
+    font-size: rem(12);
+    color: $mainGray;
+  }
+}

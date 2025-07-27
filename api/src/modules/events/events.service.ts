@@ -9,11 +9,11 @@ export class EventsService {
 		private readonly dataSource: DataSource,
 	) {}
 
-	async getEvents(id: string): Promise<IEvents> {
+	async getEvents(title: string): Promise<IEvents> {
 		try {
 			const event: IEvents[] = await this.dataSource.query<IEvents[]>(
-				"select * from events where id = $1",
-				[id],
+				"select * from events where title = $1",
+				[title],
 			);
 
 			if (event.length === 0) {

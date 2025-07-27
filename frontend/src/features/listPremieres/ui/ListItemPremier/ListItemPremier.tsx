@@ -1,4 +1,6 @@
 import type { IPremieres } from "@shared/types/premieres.interface";
+import styles from "./ListItemPremier.module.scss";
+import { Link } from "react-router";
 
 interface IListItemPremierProps {
   premier: IPremieres;
@@ -6,22 +8,29 @@ interface IListItemPremierProps {
 
 export const ListItemPremier = ({ premier }: IListItemPremierProps) => {
   return (
-    <li>
-      <div
-        style={{ backgroundImage: `url(${premier.img})` }}
-        aria-label={`Постер премьеры ${premier.title}`}
-      />
+    <li className={styles.listItem}>
+      <Link to={`/event/${premier.title}`}>
+        <div
+          style={{
+            backgroundImage: `url(${import.meta.env.VITE_API_URL}${
+              premier.img
+            })`,
+          }}
+          aria-label={`Постер премьеры ${premier.title}`}
+          className={styles.listItemBack}
+        />
 
-      <div>
-        <div>
-          <time>{premier.date}</time>
-          <span>{premier.age}</span>
+        <div className={styles.listItemInfo}>
+          <div className={styles.listItemDate}>
+            <time className={styles.listItemDateTime}>{premier.date}</time>
+            <span className={styles.listItemDateAge}>{premier.age}</span>
+          </div>
+          <div>
+            <h3 className={styles.listItemTitle}>{premier.title}</h3>
+            <p className={styles.listItemAbout}>{premier.about}</p>
+          </div>
         </div>
-        <div>
-          <h3>{premier.title}</h3>
-          <p>{premier.about}</p>
-        </div>
-      </div>
+      </Link>
     </li>
   );
 };
