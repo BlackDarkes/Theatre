@@ -1,8 +1,8 @@
 import { useAllPremieres } from "@features/listPremieres/api/useAllPremieres";
-import { ListItemPremier } from "../ListItemPremier/ListItemPremier";
 import { Loading } from "./Loading/Loading";
 import { Error } from "./Error/Error";
 import styles from "./ListPremieres.module.scss";
+import { GeneratePremiers } from "@features/listPremieres/module/GeneratePremiers";
 
 interface IListPremieresProps {
   className?: string;
@@ -19,9 +19,7 @@ export const ListPremieres = ({ className }: IListPremieresProps) => {
 
   return (
     <ul className={`${className} ${styles.list}`}>
-      {premieres?.map((premier) => {
-        return <ListItemPremier key={premier.id} premier={premier} />
-      })}
+      <GeneratePremiers premieres={premieres} classButton={styles.listButton} />
     </ul>
   );
 };

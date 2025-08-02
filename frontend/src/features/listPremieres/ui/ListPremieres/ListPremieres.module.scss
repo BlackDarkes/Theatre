@@ -4,8 +4,19 @@
   height: rem(500);
   overflow-x: auto;
 
+  &Button {
+    width: min(rem(335), 100%);
+    color: $mainBlack !important;
+    background-color: transparent !important;
+    border-color: $mainBlack !important;
+    text-align: center;
+  }
+
   @include mobile() {
     flex-direction: column;
+    align-items: center;
+    row-gap: rem(30);
     height: auto;
+    overflow-x: visible;
   }
 }
