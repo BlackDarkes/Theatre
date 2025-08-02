@@ -1,0 +1,55 @@
+.aboutCount {
+  margin-top: rem(71);
+
+  &Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile() {
+      flex-direction: column;
+    }
+  }
+
+  &Link {
+    display: block;
+    position: relative;
+    outline: rem(1) solid transparent;
+    outline-offset: rem(5);
+    border-radius: rem(8);
+    transition: $transition;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: rem(-2);
+      left: 0;
+      width: 100%;
+      height: rem(2);
+      background-color: $mainBlack;
+      transform-origin: left;
+      scale: 1;
+      transition: $transition;
+    }
+
+    @include hover() {
+      &::before {
+        background-color: $mainRed;
+        transform-origin: left;
+        scale: 0;
+      }
+    }
+
+    &:active{
+      color: $mainRed;
+    }
+
+    &:focus-visible {
+      outline-color: $mainRed;
+
+      &::before {
+        scale: 0;
+      }
+    }
+  }
+}

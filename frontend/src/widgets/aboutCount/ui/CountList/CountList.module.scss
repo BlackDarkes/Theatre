@@ -1,0 +1,17 @@
+.list {
+  display: flex;
+  column-gap: clamp(rem(30), 3vw, rem(60));
+  
+  padding-block: rem(43) rem(32);
+
+  &Title {
+    font-size: rem(12);
+    color: $darkGray;
+  }
+
+  &Body {
+    font-size: rem(24);
+    color: $mainBlack;
+    font-weight: 700;
+  }
+}
