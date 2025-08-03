@@ -1,6 +1,6 @@
 import { COUNT_INFO } from "@widgets/aboutCount/constants/countInfo";
 import { CountList } from "../CountList/CountList";
-import { Container } from "@shared/ui/Container/Container";
+import { Container } from "@shared/ui";
 import { Link } from "react-router";
 import styles from './AboutCount.module.scss'
 

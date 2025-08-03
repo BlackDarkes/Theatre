@@ -1,4 +1,4 @@
-import { Container } from "@shared/ui/Container/Container";
+import { Container } from "@shared/ui";
 import { ButtonsList } from "../ButtonsList/ButtonsList";
 import styles from "./Buttons.module.scss";
 

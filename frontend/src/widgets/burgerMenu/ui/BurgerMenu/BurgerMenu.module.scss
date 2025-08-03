@@ -2,10 +2,10 @@
   position: fixed;
   top: 0;
   right: 0;
-  padding: rem(40);
+  padding: rem(80) rem(40);
   width: min(100%, rem(580));
   height: 100vh;
-  background-color: $mainGray;
+  background-color: $mainWhite;
   transform: translateX(100%);
   transition: $transition;
   z-index: $z-400;

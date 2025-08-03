@@ -1,4 +1,4 @@
-import type { IInformation } from "../types/information.interface";
+import type { IInformation } from "../../../shared/types/information.interface";
 
 export const COUNT_INFO: IInformation[] = [
   {
@@ -16,4 +16,4 @@ export const COUNT_INFO: IInformation[] = [
     title: "Казань - Иннополис",
     body: "42 км.",
   },
-]
+];

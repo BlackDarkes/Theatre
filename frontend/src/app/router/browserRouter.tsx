@@ -1,7 +1,7 @@
 import {
   AboutPage,
   AllNewsPage,
-  EventsPage,
+  EventPage,
   HomePage,
   NewsPage,
   PaymentPage,
@@ -35,7 +35,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <EventsPage />,
+        element: <EventPage />,
       },
       {
         path: "payments",

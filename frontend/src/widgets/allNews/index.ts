@@ -1,0 +1,1 @@
+export { AllNews } from "./ui/ALlNews/AllNews.tsx"

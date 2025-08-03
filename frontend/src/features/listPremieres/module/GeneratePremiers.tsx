@@ -2,7 +2,7 @@ import { useWindowSize } from "@shared/modules/useWindowSize";
 import type { IPremieres } from "@shared/types/premieres.interface";
 import { ListItemPremier } from "../ui/ListItemPremier/ListItemPremier";
 import type { ReactNode } from "react";
-import { Button } from "@shared/ui/Button/Button";
+import { Button } from "@shared/ui";
 
 interface IGeneratePremiersProps {
   premieres: IPremieres[];

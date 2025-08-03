@@ -1,4 +1,4 @@
-import { Button } from "@shared/ui/Button/Button";
+import { Button } from "@shared/ui";
 import { NAME_BUTTONS } from "@widgets/buttons/constants/listNameButtons";
 import styles from "./ButtonsList.module.scss";
 

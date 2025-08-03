@@ -1,6 +1,6 @@
 import ImageLogo from "../../assets/logo.svg";
-import { Container } from "@shared/ui/Container/Container";
 import { NavBar } from "../NavBar/NavBar";
+import { Container } from "@shared/ui";
 import styles from "./Header.module.scss";
 import { BurgerButton, BurgerMenu, useBurgerMenu } from "../../../burgerMenu";
 

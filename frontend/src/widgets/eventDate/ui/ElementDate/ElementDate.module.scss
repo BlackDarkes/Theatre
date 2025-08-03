@@ -1,0 +1,12 @@
+.listItem {
+  &Title {
+    margin-bottom: rem(5);
+    color: $darkGray;
+    font-size: rem(12);
+  }
+
+  &Body {
+    @include fluid-text(24, 18);
+    font-weight: 700;
+  }
+}

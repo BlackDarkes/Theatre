@@ -1,5 +1,5 @@
 import { NewsShortList } from "@features/news";
-import { Container } from "@shared/ui/Container/Container";
+import { Container } from "@shared/ui";
 import styles from './NewsShort.module.scss'
 
 export const NewsShort = () => {

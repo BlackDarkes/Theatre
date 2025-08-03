@@ -6,4 +6,8 @@
     @include fluid-text(36, 24);
     margin-bottom: rem(30);
   }
+
+  @include mobile() {
+    padding-top: rem(40);
+  }
 }

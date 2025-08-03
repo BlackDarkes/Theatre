@@ -1,4 +1,5 @@
-import { Container } from "@shared/ui/Container/Container";
+
+import { Container } from "@shared/ui";
 import { TextInfo } from "../TextInfo/TextInfo";
 import { useState } from "react";
 import { ButtonsInfo } from "../ButtonsInfo/ButtonsInfo";

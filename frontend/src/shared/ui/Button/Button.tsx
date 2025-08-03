@@ -5,7 +5,7 @@ import { Link } from "react-router";
 interface IButtonProps {
   children: ReactNode;
   ariaLabel: string;
-  to: string;
+  to?: string;
   className?: string;
   onClick?: () => void;
 }
@@ -17,7 +17,7 @@ export const Button = ({
   className,
   onClick,
 }: IButtonProps) => {
-  return (
+  return to ? (
     <Link
       to={to}
       aria-label={ariaLabel}
@@ -26,5 +26,13 @@ export const Button = ({
     >
       {children}
     </Link>
+  ) : (
+    <button
+      type="button"
+      aria-label={ariaLabel}
+      className={`${styles.button} ${className ? className : ""}`}
+    >
+      {children}
+    </button>
   );
 };

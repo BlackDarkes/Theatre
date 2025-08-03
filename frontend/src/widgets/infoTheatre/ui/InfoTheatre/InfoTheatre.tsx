@@ -1,4 +1,5 @@
-import { Container } from "@shared/ui/Container/Container";
+
+import { Container } from "@shared/ui";
 import { TheatreInfo } from "@shared/ui/TheatreInfo/TheatreInfo";
 import { Link } from "react-router";
 import styles from "./InfoTheatre.module.scss";

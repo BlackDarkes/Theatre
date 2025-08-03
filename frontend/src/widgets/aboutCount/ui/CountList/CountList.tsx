@@ -1,19 +1,19 @@
-import type { IInformation } from "@widgets/aboutCount/types/information.interface";
-import styles from './CountList.module.scss'
+import type { IInformation } from "@shared/types/information.interface";
+import styles from "./CountList.module.scss";
 
 interface ICountListProps {
-  information: IInformation[]
+  information: IInformation[];
 }
-  
+
 export const CountList = ({ information }: ICountListProps) => {
   return (
     <ul className={styles.list}>
-      { information.map((info) => (
+      {information.map((info) => (
         <li key={info.id}>
           <h3 className={styles.listTitle}>{info.title}</h3>
           <p className={styles.listBody}>{info.body}</p>
         </li>
-      )) }
+      ))}
     </ul>
   );
-}
+};

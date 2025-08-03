@@ -1,5 +1,5 @@
 import { NewsAllList } from "@features/news";
-import { Container } from "@shared/ui/Container/Container";
+import { Container } from "@shared/ui";
 import styles from './AllNews.module.scss'
 
 export const AllNews = () => {

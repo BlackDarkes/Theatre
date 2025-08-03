@@ -1,0 +1,43 @@
+.eventDate {
+  &Info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: rem(30);
+
+    @include mobile() {
+      flex-direction: column;
+      row-gap: rem(40);
+    }
+  }
+  
+  &Image {
+    height: rem(718);
+  }
+
+  &List {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(rem(30), 8vw, rem(150));
+
+    & > li:first-child > h3 {
+      @include fluid-text(36, 24);
+      color: $mainBlack;
+      line-height: 100%;
+    }
+
+    & > li:first-child > p {
+      @include fluid-text(18, 14);
+      font-weight: 500;
+      color: $acceptDark;
+    }
+  }
+
+  &Button {
+    @include mobile() {
+      padding-block: rem(39);
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+}

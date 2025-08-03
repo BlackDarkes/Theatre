@@ -1,5 +1,5 @@
 import { ListPremieres } from "@features/listPremieres/ui/ListPremieres/ListPremieres";
-import { Container } from "@shared/ui/Container/Container";
+import { Container } from "@shared/ui";
 import styles from "./Premier.module.scss";
 
 export const Premier = () => {
