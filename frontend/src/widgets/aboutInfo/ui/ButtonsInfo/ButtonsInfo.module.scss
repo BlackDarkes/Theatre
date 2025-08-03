@@ -6,12 +6,26 @@
   &Button {
     padding-block: rem(10);
     width: 100%;
+    outline: rem(1) solid transparent;
+    outline-offset: rem(5);
     border-bottom: rem(2) solid $acceptGray;
     text-align: center;
     transition: $transition;
 
     &Active {
       border-bottom-color: $mainRed;
+    }
+
+    &:active {
+      transform: translateY(rem(1));
+    }
+
+    &:focus-visible {
+      outline-color: $mainRed;
+    }
+
+    @include hover() {
+      background-color: $acceptGray;
     }
   }
 }

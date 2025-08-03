@@ -1,0 +1,9 @@
+.allNews {
+  margin-top: rem(71);
+  padding-block: rem(50);
+
+  &Title {
+    @include fluid-text(36, 24);
+    margin-bottom: rem(30);
+  }
+}

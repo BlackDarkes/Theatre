@@ -1,6 +1,6 @@
 import { useAllNews } from "@features/news/api/getAllNews";
-import { generateShortList } from "@features/news/module/generateShortList";
 import styles from './NewsShortList.module.scss'
+import { GenerateList } from "@features/news/module/generateList";
 
 export const NewsShortList = () => {
   const { isLoading, error, news } = useAllNews();
@@ -9,11 +9,9 @@ export const NewsShortList = () => {
   if (error) return <p>Error: {error.message}</p>
   if (!news || news.length === 0) return <p>No news found.</p>
 
-  const newsList = generateShortList({ news })
-
   return (
     <ul className={styles.newsShort}>
-      {newsList}
+      <GenerateList news={news} count={4} />
     </ul>
   );
 }

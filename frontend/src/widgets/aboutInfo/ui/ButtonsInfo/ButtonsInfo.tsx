@@ -1,4 +1,4 @@
-import styles from './ButtonsInfo.module.scss'
+import styles from "./ButtonsInfo.module.scss";
 
 interface IButtonsInfoProps {
   handleType: (selectedType: string) => void;
@@ -8,7 +8,13 @@ interface IButtonsInfoProps {
 export const ButtonsInfo = ({ handleType, type }: IButtonsInfoProps) => {
   return (
     <div className={styles.buttons}>
-      <p className={`${styles.buttonsButton} ${type === "main" ? styles.buttonsButtonActive : ""}`}>
+      <label
+        htmlFor="mainType"
+        className={`${styles.buttonsButton} ${
+          type === "main" ? styles.buttonsButtonActive : ""
+        }`}
+        tabIndex={0}
+      >
         <input
           type="radio"
           name="infoType"
@@ -16,19 +22,27 @@ export const ButtonsInfo = ({ handleType, type }: IButtonsInfoProps) => {
           value="main"
           onChange={() => handleType("main")}
           checked={type === "main"}
+          tabIndex={-1}
         />{" "}
-        <label htmlFor="mainType">История города</label>
-      </p>
-      <p className={`${styles.buttonsButton} ${type === "second" ? styles.buttonsButtonActive : ""}`}>
+        История города
+      </label>
+      <label
+        htmlFor="secondType"
+        className={`${styles.buttonsButton} ${
+          type === "second" ? styles.buttonsButtonActive : ""
+        }`}
+        tabIndex={0}
+      >
         <input
           type="radio"
           name="infoType"
           id="secondType"
           value="second"
           onChange={() => handleType("second")}
+          tabIndex={-1}
         />{" "}
-        <label htmlFor="secondType">Экскурсии по городу</label>
-      </p>
+        Экскурсии по городу
+      </label>
     </div>
   );
 };

@@ -35,7 +35,6 @@
 
     @include hover() {
       &::before {
-        background-color: $mainRed;
         transform-origin: left;
         scale: 0;
       }
