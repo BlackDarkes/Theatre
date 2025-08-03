@@ -1,0 +1,17 @@
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: rem(30);
+
+  &Button {
+    padding-block: rem(10);
+    width: 100%;
+    border-bottom: rem(2) solid $acceptGray;
+    text-align: center;
+    transition: $transition;
+
+    &Active {
+      border-bottom-color: $mainRed;
+    }
+  }
+}

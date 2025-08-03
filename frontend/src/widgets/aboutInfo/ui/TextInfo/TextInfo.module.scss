@@ -1,0 +1,9 @@
+.text {
+  font-size: rem(14);
+  color: $mainBlack;
+  text-align: justify;
+
+  &:not(&:last-child) {
+    margin-bottom: rem(14);
+  }
+}

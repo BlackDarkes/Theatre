@@ -4,3 +4,13 @@
 @mixin fluid-text($max: 48, $min: 16) {
   font-size: fluid($max, $min);
 }
+
+@mixin hide() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  user-select: none;
+  width: 0;
+  height: 0;
+}

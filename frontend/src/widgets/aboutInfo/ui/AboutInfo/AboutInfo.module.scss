@@ -1,0 +1,25 @@
+.aboutInfo {
+  padding-block: rem(40);
+
+  &Container {
+    display: flex;
+    align-items: flex-start;
+    column-gap: rem(40);
+
+    @include tablet() {
+      flex-direction: column-reverse;
+      row-gap: rem(50);
+      align-items: center;
+    }
+  }
+
+  &Info {
+    width: min(100%, rem(582));
+  }
+
+  &Image {
+    padding: rem(10);
+    width: min(100%, rem(560));
+    background-color: $mainGray;
+  }
+}

@@ -22,3 +22,7 @@ a {
   color: inherit;
   outline: 0;
 }
+
+input[type="radio"] {
+  @include hide();
+}

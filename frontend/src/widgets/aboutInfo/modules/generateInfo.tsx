@@ -1,11 +1,14 @@
+import type { ReactNode } from "react";
+
 interface IGenerateInfoProps {
   texts: string[];
+  classText: string;
 }
   
-export const generateInfo = ({ texts }: IGenerateInfoProps) => {
+export const GenerateInfo = ({ texts, classText }: IGenerateInfoProps): ReactNode => {
   const generateTexts = () => {
     return texts.map((text, index) => (
-      <p key={index}>{text}</p>
+      <p key={index} className={classText}>{text}</p>
     ))
   }
 
