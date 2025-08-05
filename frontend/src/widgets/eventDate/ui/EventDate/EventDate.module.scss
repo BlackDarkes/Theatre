@@ -1,4 +1,10 @@
 .eventDate {
+  &Image {
+    height: rem(718);
+    width: 100%;
+    background: no-repeat center ;
+  }
+
   &Info {
     display: flex;
     justify-content: space-between;
@@ -11,10 +17,6 @@
     }
   }
   
-  &Image {
-    height: rem(718);
-  }
-
   &List {
     display: flex;
     flex-wrap: wrap;
