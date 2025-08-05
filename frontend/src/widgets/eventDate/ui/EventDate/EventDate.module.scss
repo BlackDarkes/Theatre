@@ -1,8 +1,12 @@
 .eventDate {
   &Image {
-    height: rem(718);
+    height: rem(497);
     width: 100%;
-    background: no-repeat center ;
+    background: no-repeat top;
+
+    @include mobile() {
+      height: rem(589);
+    }
   }
 
   &Info {
@@ -23,7 +27,7 @@
     gap: clamp(rem(30), 8vw, rem(150));
 
     & > li:first-child > h3 {
-      @include fluid-text(36, 24);
+      @include fluid-text(36, 30);
       color: $mainBlack;
       line-height: 100%;
     }
@@ -32,6 +36,8 @@
       @include fluid-text(18, 14);
       font-weight: 500;
       color: $acceptDark;
+      
+      @include hide();
     }
   }
 
