@@ -1,0 +1,29 @@
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-block: rem(50) rem(30);
+
+  &Label {
+    padding-block: rem(10);
+    width: 100%;
+    text-align: center;
+    border-bottom: rem(2) solid $mainGray;
+    transition: $transition;
+
+    &Active {
+      border-bottom-color: $mainRed;
+    }
+
+    &:active {
+      transform: translateY(rem(1));
+    }
+
+    &:focus-visible {
+      outline-color: $mainRed;
+    }
+
+    @include hover() {
+      background-color: $acceptGray;
+    }
+  }
+}
