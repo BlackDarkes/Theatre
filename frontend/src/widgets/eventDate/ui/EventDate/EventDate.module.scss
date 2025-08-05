@@ -37,11 +37,30 @@
       font-weight: 500;
       color: $acceptDark;
       
-      @include hide();
+      @include mobile() {
+        @include hide();
+      }
     }
   }
 
   &Button {
+    outline: rem(1) solid transparent;
+    outline-offset: rem(5);
+    transition: $transition;
+
+    &:active {
+      background-color: $mainWhite;
+      color: $mainRed;
+    }
+
+    &:focus-visible {
+      outline-color: $mainRed;
+    }
+
+    @include hover() {
+      opacity: 0.8;
+    }
+
     @include mobile() {
       padding-block: rem(39);
       width: 100%;
