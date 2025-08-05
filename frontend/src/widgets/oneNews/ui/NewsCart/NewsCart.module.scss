@@ -1,0 +1,25 @@
+.newsCart {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(50);
+
+  &Title {
+    margin-top: rem(25);
+  }
+
+  &Date {
+    @include fluid-text(20, 16);
+    margin-bottom: rem(5);
+    color: $acceptGray;
+  }
+
+  &Name {
+    @include fluid-text(36, 24);
+    color: $mainBlack;
+  }
+
+  &Text {
+    font-size: rem(14);
+    margin-bottom: rem(24);
+  }
+}

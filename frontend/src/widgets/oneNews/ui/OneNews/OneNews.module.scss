@@ -1,0 +1,15 @@
+.oneNews {
+  margin-top: rem(71);
+
+  &Image {
+    width: 100%;
+    height: rem(425);
+    background: no-repeat center;
+    background-size: max(rem(700), rem(1280)) rem(450);
+
+    @include mobile() {
+      height: rem(150);
+      background-size: 100% rem(150);
+    }
+  }
+}
