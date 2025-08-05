@@ -1,4 +1,5 @@
-import type { IInformation } from "../../../shared/types/information.interface";
+import type { IInformation } from "@shared/types";
+
 
 export const COUNT_INFO: IInformation[] = [
   {

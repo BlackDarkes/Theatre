@@ -1,4 +1,4 @@
-import type { INews } from "@shared/types/news.interface";
+import type { INews } from "@shared/types";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 

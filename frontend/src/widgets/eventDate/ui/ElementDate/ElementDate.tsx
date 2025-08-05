@@ -1,10 +1,10 @@
-import type { IInformation } from "@shared/types/information.interface";
-import styles from './ElementDate.module.scss'
+import type { IInformation } from "@shared/types";
+import styles from "./ElementDate.module.scss";
 
 interface IElementDateProps {
   date: IInformation;
 }
-  
+
 export const ElementDate = ({ date }: IElementDateProps) => {
   return (
     <li>
@@ -12,4 +12,4 @@ export const ElementDate = ({ date }: IElementDateProps) => {
       <p className={styles.listItemBody}>{date.body}</p>
     </li>
   );
-}
+};

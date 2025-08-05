@@ -1,9 +1,13 @@
-import type { IEvent } from "@shared/types/event.interface";
+import type { IEvent } from "@shared/types";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 export const useEventByTitle = (title: string | null) => {
-  const { isLoading, error, data: event } = useQuery<IEvent>({
+  const {
+    isLoading,
+    error,
+    data: event,
+  } = useQuery<IEvent>({
     queryKey: ["event", title],
     queryFn: async () => {
       const response = await axios.get<IEvent>(
@@ -12,7 +16,6 @@ export const useEventByTitle = (title: string | null) => {
       return response.data;
     },
   });
-
 
   return { isLoading, error, event };
 };

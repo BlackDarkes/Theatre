@@ -1,4 +1,4 @@
-import { type IInfo } from "../types/info.interface.ts";
+import type { IInfo } from "../types/info.interface.ts";
 
 export const MAIN_INFO: IInfo = {
   id: 1,

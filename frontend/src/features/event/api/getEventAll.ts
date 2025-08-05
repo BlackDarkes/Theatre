@@ -1,4 +1,4 @@
-import type { IEvent } from "@shared/types/event.interface";
+import type { IEvent } from "@shared/types";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
@@ -17,5 +17,5 @@ export const useGetEvent = () => {
     },
   });
 
-  return { isLoading, error, events }
+  return { isLoading, error, events };
 };

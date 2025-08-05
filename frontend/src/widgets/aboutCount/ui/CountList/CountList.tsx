@@ -1,4 +1,4 @@
-import type { IInformation } from "@shared/types/information.interface";
+import type { IInformation } from "@shared/types";
 import styles from "./CountList.module.scss";
 
 interface ICountListProps {

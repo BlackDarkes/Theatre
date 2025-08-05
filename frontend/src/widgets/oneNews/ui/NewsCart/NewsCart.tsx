@@ -1,12 +1,12 @@
-import type { INews } from "@shared/types/news.interface";
-import { GenerateInfo } from "@shared/modules/generateInfo";
+import type { INews } from "@shared/types";
+import { GenerateInfo } from "@shared/modules";
 import { INFORMATION } from "@widgets/oneNews/constants/information";
-import styles from './NewsCart.module.scss'
+import styles from "./NewsCart.module.scss";
 
 interface INewsCartProps {
   news: INews | undefined;
 }
-  
+
 export const NewsCart = ({ news }: INewsCartProps) => {
   if (!news) return null;
 
@@ -21,4 +21,4 @@ export const NewsCart = ({ news }: INewsCartProps) => {
       </div>
     </div>
   );
-}
+};

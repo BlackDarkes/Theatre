@@ -1,5 +1,5 @@
-import { useWindowSize } from "@shared/modules/useWindowSize";
-import type { IPremieres } from "@shared/types/premieres.interface";
+import { useWindowSize } from "@shared/modules";
+import type { IPremieres } from "@shared/types";
 import { ListItemPremier } from "../ui/ListItemPremier/ListItemPremier";
 import type { ReactNode } from "react";
 import { Button } from "@shared/ui";
@@ -9,16 +9,26 @@ interface IGeneratePremiersProps {
   classButton: string;
 }
 
-export const GeneratePremiers = ({ premieres, classButton }: IGeneratePremiersProps): ReactNode => {
+export const GeneratePremiers = ({
+  premieres,
+  classButton,
+}: IGeneratePremiersProps): ReactNode => {
   const { width } = useWindowSize();
   if (!Array.isArray(premieres)) return <p>No news found.</p>;
 
-  const filterPremieres =  width < 768
-    ? premieres
-        .filter((premierItem) => premierItem.id < 4)
-    : premieres;
+  const filterPremieres =
+    width < 768
+      ? premieres.filter((premierItem) => premierItem.id < 4)
+      : premieres;
 
-  const mobileButton = width < 768 ? <Button ariaLabel="Ещё" to="/events" className={classButton}>Еще &gt;</Button> : "";
+  const mobileButton =
+    width < 768 ? (
+      <Button ariaLabel="Ещё" to="/events" className={classButton}>
+        Еще &gt;
+      </Button>
+    ) : (
+      ""
+    );
 
   return (
     <>
@@ -27,5 +37,5 @@ export const GeneratePremiers = ({ premieres, classButton }: IGeneratePremiersPr
       ))}
       {mobileButton}
     </>
-  )
+  );
 };

@@ -17,7 +17,7 @@ export const EventDate = () => {
           <ul className={styles.eventDateList}>
             <GenerateDate date={DATE_INFORMATION} />
           </ul>
-          <Button ariaLabel="Купить билет" className={styles.eventDateButton}>Купить билет</Button>
+          <Button ariaLabel="Купить билет" to={"./payments"} className={styles.eventDateButton}>Купить билет</Button>
         </div>
       </Container>
     </section>

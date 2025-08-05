@@ -1,4 +1,4 @@
-import type { IPremieres } from "@shared/types/premieres.interface"; 
+import type { IPremieres } from "@shared/types";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 

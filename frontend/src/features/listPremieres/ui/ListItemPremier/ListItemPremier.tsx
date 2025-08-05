@@ -1,4 +1,4 @@
-import type { IPremieres } from "@shared/types/premieres.interface";
+import type { IPremieres } from "@shared/types";
 import styles from "./ListItemPremier.module.scss";
 import { Link } from "react-router";
 
