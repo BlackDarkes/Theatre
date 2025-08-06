@@ -1,0 +1,25 @@
+.paymentPrice {
+  &Image {
+    width: 100%;
+    height: rem(496);
+    background: no-repeat center;
+  }
+
+  &Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &Buy {
+    @include fluid-text(36, 24);
+    color: $mainBlack
+  }
+
+  &Price {
+    @include fluid-text(36, 24);
+    padding: rem(39) rem(50);
+    background-color: $mainRed;
+    color: $mainWhite;
+  }
+}

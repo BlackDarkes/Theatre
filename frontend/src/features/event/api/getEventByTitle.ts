@@ -2,7 +2,7 @@ import type { IEvent } from "@shared/types";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
-export const useEventByTitle = (title: string | null) => {
+export const useEventByTitle = (title: string | undefined) => {
   const {
     isLoading,
     error,
