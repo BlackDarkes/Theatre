@@ -1,0 +1,59 @@
+.paymentInfo {
+  padding-top: rem(50);
+  width: 100%;
+
+  &Time {
+    &Title {
+      font-size: rem(18);
+      margin-bottom: rem(20);
+    }
+
+    &Buttons {
+      display: flex;
+      column-gap: rem(20);
+      margin-bottom: rem(40);
+    }
+
+    &Button {
+      padding: rem(12) rem(20);
+      border: rem(2) solid $mainRed;
+      border-radius: rem(22);
+      transition: $transition;
+
+      &Active {
+        background-color: $mainRed;
+        color: $mainWhite;
+      }
+    }
+  }
+
+  &About {
+    font-size: rem(14);
+  }
+
+  &EventButtons {
+    display: flex;
+    column-gap: rem(20);
+    margin-top: rem(50);
+  }
+
+  &EventButton {
+    transition: $transition;
+
+    &:first-child {
+      &:active {
+        background-color: $mainWhite;
+        color: $mainRed;
+      }
+    }
+
+    &:last-child {
+      background-color: $acceptGray;
+      color: $mainBlack;
+
+      &:active {
+        background-color: $mainWhite;
+      }
+    }
+  }
+}

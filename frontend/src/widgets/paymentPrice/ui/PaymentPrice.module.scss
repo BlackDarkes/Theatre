@@ -2,13 +2,20 @@
   &Image {
     width: 100%;
     height: rem(496);
-    background: no-repeat center;
+    background: no-repeat top;
   }
 
   &Container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mobile-s() {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: rem(10);
+      padding-top: rem(25);
+    }
   }
 
   &Buy {
@@ -17,8 +24,8 @@
   }
 
   &Price {
-    @include fluid-text(36, 24);
-    padding: rem(39) rem(50);
+    @include fluid-text(36, 20);
+    padding: clamp(rem(24), 5vw, rem(39)) clamp(rem(28), 5vw, rem(50));
     background-color: $mainRed;
     color: $mainWhite;
   }
