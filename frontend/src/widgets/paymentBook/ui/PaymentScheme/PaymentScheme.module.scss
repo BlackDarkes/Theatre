@@ -1,0 +1,10 @@
+.paymentScheme {
+  width: 100%;
+
+  &Scheme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: rem(5);
+  }
+}

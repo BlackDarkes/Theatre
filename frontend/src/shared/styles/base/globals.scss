@@ -26,7 +26,7 @@ a {
   outline: 0;
 }
 
-input[type="radio"] {
+input[type="radio"], input[type="checkbox"] {
   @include visually-hidden();
   
   &:not(:focus):not(:active) {

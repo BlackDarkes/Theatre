@@ -1,0 +1,9 @@
+.paymentBook {
+  padding-bottom: rem(70);
+
+  &Container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: rem(50);
+  }
+}
