@@ -10,7 +10,7 @@ export const GenerateScheme = ({ scheme, classScheme }: IGenerateSchemeProps) =>
     <div>
       {scheme.map((count, rowIndex) => (
         <div key={`row-${rowIndex}`} className={classScheme.paymentSchemeScheme}>
-          <h3 style={{ fontSize: "14px", margin: 0 }}>{++rowIndex}</h3>
+          <h3 className={classScheme.paymentSchemeNumber}>{++rowIndex}</h3>
           {Array.from({ length: count }).map((_, seatIndex) => (
             <SchemeElement id={`${rowIndex}-${seatIndex}`} key={`${rowIndex}-${seatIndex}`} />
           ))}
